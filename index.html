@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Профессиональная клининговая компания Лотос в Москве. Услуги уборки квартир, офисов, складов. Генеральная уборка и клининг после ремонта.">
+    <meta name="keywords" content="клининговая компания Москва, уборка квартир, клининг офисов, генеральная уборка, уборка после ремонта, услуги клининга">
+    <title>Клининговая Компания "Лотос" | Профессиональная уборка в Москве</title>
+    
+    <!-- Подключение шрифтов Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Настройка темы Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // teal-500
+                            600: '#0d9488', // teal-600
+                            900: '#134e4a', // teal-900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Подключение иконок Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Дополнительные стили для плавных переходов */
+        .service-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Навигация -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Логотип -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-600 rounded-full flex items-center justify-center text-white shadow-md transform transition hover:scale-105">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3c-1.5 3-4 6-4 10a4 4 0 0 0 8 0c0-4-2.5-7-4-10z"/>
+                            <path d="M8 11c-2-2-5-2-7 0 2 5 5 8 11 10-1-3-1-6-4-10z"/>
+                            <path d="M16 11c2-2 5-2 7 0-2 5-5 8-11 10 1-3 1-6 4-10z"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-slate-900">Лотос</span>
+                </div>
+                
+                <!-- Десктопное меню -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">О нас</a>
+                    <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Услуги</a>
+                    <a href="#contacts" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Контакты</a>
+                    <a href="tel:+79998701693" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        +7 (999) 870-16-93
+                    </a>
+                </div>
+
+                <!-- Мобильная кнопка меню (функциональная) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Открыть меню" class="text-slate-600 hover:text-brand-600 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мобильное выпадающее меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 top-20">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">О нас</a>
+                <a href="#services" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Услуги</a>
+                <a href="#contacts" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Контакты</a>
+                <a href="tel:+79998701693" class="mt-4 flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-5 py-3 rounded-xl font-medium transition-colors w-full text-center">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Позвонить нам
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран (Hero) -->
+    <section class="relative pt-28 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-blue-50 opacity-90"></div>
+            <!-- Декоративные круги -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-100 blur-3xl opacity-50"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-brand-100 text-brand-700 font-semibold text-sm mb-6 border border-brand-200 tracking-wide">
+                Комплексные клининговые решения для бизнеса и частных лиц
+            </span>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                Профессиональная уборка <br class="hidden md:block" />
+                <span class="text-brand-600">в Москве и области</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+                Клининговая компания «Лотос» предоставляет качественные услуги по уборке квартир, офисов и производственных помещений. Опытные клинеры и безопасная химия!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-brand-500/30">
+                    Наши услуги
+                </a>
+                <a href="#contacts" class="bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-sm flex items-center justify-center gap-2">
+                    Связаться с нами
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "О нас / Преимущества" -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Почему выбирают нас?</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Преимущество 1 -->
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
+                        <i data-lucide="timer" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Быстро</h3>
+                    <p class="text-slate-600">Оперативно выезжаем на объект и выполняем работу в строго оговоренные сроки без потери качества.</p>
+                </div>
+                <!-- Преимущество 2 -->
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Качественно</h3>
+                    <p class="text-slate-600">Используем профессиональное оборудование и безопасные моющие средства для идеального результата.</p>
+                </div>
+                <!-- Преимущество 3 -->
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
+                        <i data-lucide="wallet" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Доступно</h3>
+                    <p class="text-slate-600">Прозрачная система ценообразования. Вы точно знаете, за что платите, никаких скрытых платежей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Услуг -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Наши услуги</h2>
+                    <div class="w-20 h-1 bg-brand-500 rounded-full mb-4"></div>
+                    <p class="text-slate-600 max-w-2xl">Полный спектр клининговых услуг для любых типов помещений. Мы подберем оптимальное решение именно для вашей задачи.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Услуга 1 -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col">
+                    <div class="h-56 overflow-hidden relative flex items-center justify-center bg-slate-100">
+                        <img src="https://static.comunicae.com/photos/notas/1190758/1509713534_empresa_limpieza_barcelona.jpg" alt="Профессиональная уборка квартир в Москве Лотос" class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Уборка квартир и домов</h3>
+                        <p class="text-slate-600 flex-1">Качественная уборка квартир и частных домов любой сложности. Сухая и влажная уборка, обеспыливание поверхностей, мытье окон.</p>
+                    </div>
+                </div>
+
+                <!-- Услуга 2 -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col">
+                    <div class="h-56 overflow-hidden relative flex items-center justify-center bg-slate-100">
+                        <img src="https://static.tildacdn.com/tild3565-6636-4765-a466-653338616332/0E6A2748-min.JPG" alt="Регулярный клининг офисов и бизнес-центров" class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Клининг офисов</h3>
+                        <p class="text-slate-600 flex-1">Регулярное и разовое поддержание чистоты в офисных помещениях и коммерческой недвижимости. Комфортная рабочая среда.</p>
+                    </div>
+                </div>
+
+                <!-- Услуга 3 -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col">
+                    <div class="h-56 overflow-hidden relative flex items-center justify-center bg-slate-100">
+                        <img src="https://expert-cleaning.com/wp-content/uploads/2024/03/ec1ecc7dd3ad4037824be7873321e259.jpeg" alt="Генеральная уборка и уборка после ремонта Москва" class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">После ремонта</h3>
+                        <p class="text-slate-600 flex-1">Комплексная глубокая генеральная уборка и вывоз строительного мусора. Идеально после ремонта или перед сдачей жилья.</p>
+                    </div>
+                </div>
+
+                <!-- Услуга 4 -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col">
+                    <div class="h-56 overflow-hidden relative flex items-center justify-center bg-slate-100">
+                        <img src="https://bonexgroup.ru/upload/iblock/829/k3xjr7kt6x34922arrl1t7sfq0w417d0.JPG" alt="Уборка складов и логистических комплексов" class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Складские помещения</h3>
+                        <p class="text-slate-600 flex-1">Профессиональная машинная и ручная уборка складов, ангаров и логистических территорий с использованием спецтехники.</p>
+                    </div>
+                </div>
+
+                <!-- Услуга 5 -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col lg:col-span-2 xl:col-span-1">
+                    <div class="h-56 overflow-hidden relative flex items-center justify-center bg-slate-100">
+                        <img src="https://1domclean.ru/images/foto/uborka-proizvodstvennyh-pomeshenyj.jpg" alt="Промышленный клининг и уборка производств" class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Промышленный клининг</h3>
+                        <p class="text-slate-600 flex-1">Очистка производственных зон и цехов со строгим соблюдением всех стандартов безопасности (ОТ и ТБ) и ГОСТов.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок Контактов -->
+    <section id="contacts" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                
+                <!-- Информация -->
+                <div class="p-10 lg:p-16 lg:w-1/2 text-white flex flex-col justify-center relative overflow-hidden">
+                    <!-- Декор -->
+                    <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-brand-800 opacity-50 blur-2xl"></div>
+                    <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 rounded-full bg-brand-700 opacity-50 blur-2xl"></div>
+                    
+                    <div class="relative z-10">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-8">Свяжитесь с нами</h2>
+                        <p class="text-brand-100 mb-10 text-lg">Готовы навести порядок? Позвоните нам или оставьте заявку, и наш менеджер свяжется с вами для расчета стоимости.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone" class="text-brand-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-200 mb-1">Телефон</p>
+                                    <a href="tel:+79998701693" class="text-xl font-semibold hover:text-brand-300 transition-colors">+7 (999) 870-16-93</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="text-brand-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-200 mb-1">Email</p>
+                                    <a href="mailto:info@chistota.ru" class="text-xl font-semibold hover:text-brand-300 transition-colors">info@chistota.ru</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="text-brand-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-200 mb-1">Офис</p>
+                                    <p class="text-xl font-semibold">г. Москва, ул. Примерная, д. 1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="bg-white p-10 lg:p-16 lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Оставить заявку</h3>
+                    <form onsubmit="event.preventDefault(); alert('Спасибо за заявку! Наш менеджер скоро свяжется с вами.');" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Ваше имя</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="Иван Иванов">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Номер телефона</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-slate-700 mb-1">Интересующая услуга</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-white">
+                                <option>Уборка квартиры</option>
+                                <option>Уборка офиса</option>
+                                <option>Генеральная уборка</option>
+                                <option>Складские/Производственные помещения</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-semibold py-4 rounded-xl shadow-md hover:shadow-lg transition-all mt-4">
+                            Получить расчет стоимости
+                        </button>
+                        <p class="text-xs text-slate-400 text-center mt-4">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <svg class="w-7 h-7 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3c-1.5 3-4 6-4 10a4 4 0 0 0 8 0c0-4-2.5-7-4-10z"/>
+                    <path d="M8 11c-2-2-5-2-7 0 2 5 5 8 11 10-1-3-1-6-4-10z"/>
+                    <path d="M16 11c2-2 5-2 7 0-2 5-5 8-11 10 1-3 1-6 4-10z"/>
+                </svg>
+                <span class="text-white font-semibold tracking-tight text-lg">Лотос</span>
+            </div>
+            <p class="text-sm text-center md:text-left">&copy; 2026 Клининговая Компания "Лотос". Все права защищены.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="send" class="w-5 h-5"></i></a> <!-- Telegram icon equivalent -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Инициализация иконок -->
+    <script>
+        lucide.createIcons();
+
+        // Логика мобильного меню
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Закрывать меню при клике на ссылку
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
