@@ -7,6 +7,13 @@
     <meta name="keywords" content="клининговая компания Москва, уборка квартир, клининг офисов, генеральная уборка, уборка после ремонта, услуги клининга">
     <title>Клининговая Компания "Лотос" | Профессиональная уборка в Москве</title>
     
+    <!-- Фавиконки -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    
     <!-- Подключение шрифтов Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,9 +69,10 @@
                     </button>
                     
                     <!-- Десктопные ссылки (слева) -->
-                    <div class="hidden md:flex items-center gap-6 lg:gap-10">
+                    <div class="hidden md:flex items-center gap-5 lg:gap-8">
                         <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">О нас</a>
                         <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">Услуги</a>
+                        <a href="#pricing" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">Цены</a>
                     </div>
                 </div>
 
@@ -78,7 +86,7 @@
                 <div class="flex-1 flex items-center justify-end">
                     
                     <!-- Десктопные ссылки (справа) -->
-                    <div class="hidden md:flex items-center gap-6 lg:gap-10 pr-4 lg:pr-6">
+                    <div class="hidden md:flex items-center gap-5 lg:gap-8 pr-4 lg:pr-6">
                         <a href="#calculator" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">Калькулятор</a>
                         <a href="#contacts" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm lg:text-base whitespace-nowrap">Контакты</a>
                     </div>
@@ -103,6 +111,7 @@
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
                 <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">О нас</a>
                 <a href="#services" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Услуги</a>
+                <a href="#pricing" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Цены</a>
                 <a href="#calculator" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Калькулятор</a>
                 <a href="#contacts" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Контакты</a>
                 <a href="tel:+79017161355" class="mt-4 flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-5 py-3 rounded-xl font-medium transition-colors w-full text-center">
@@ -273,8 +282,95 @@
         </div>
     </section>
 
+    <!-- Секция Цен (Прайс-лист) -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Прайс-лист на уборку</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600">Ознакомьтесь с нашими базовыми тарифами. Окончательная стоимость зависит от степени загрязнения.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- Тариф 1 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all gap-4 group hover:border-brand-300">
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-600 group-hover:text-brand-500 transition-colors mb-1">Уборка квартиры после ремонта</h4>
+                        <p class="text-sm text-slate-500">от 6 часов</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div class="text-lg font-bold text-slate-900 whitespace-nowrap">от 200 рублей за м²</div>
+                        <button type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Тариф 2 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all gap-4 group hover:border-brand-300">
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-600 group-hover:text-brand-500 transition-colors mb-1">Поддерживающая уборка квартиры</h4>
+                        <p class="text-sm text-slate-500">от 1,5 часов</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div class="text-lg font-bold text-slate-900 whitespace-nowrap">от 80 рублей за м²</div>
+                        <button type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Тариф 3 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all gap-4 group hover:border-brand-300">
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-600 group-hover:text-brand-500 transition-colors mb-1">Генеральная уборка квартиры</h4>
+                        <p class="text-sm text-slate-500">от 4 часов</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div class="text-lg font-bold text-slate-900 whitespace-nowrap">от 180 рублей за м²</div>
+                        <button type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Тариф 4 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all gap-4 group hover:border-brand-300">
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-600 group-hover:text-brand-500 transition-colors mb-1">Уборка 1-комнатной квартиры</h4>
+                        <p class="text-sm text-slate-500">от 1,5 часов</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div class="text-lg font-bold text-slate-900 whitespace-nowrap">от 80 рублей за м²</div>
+                        <button type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Тариф 5 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all gap-4 group hover:border-brand-300">
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-600 group-hover:text-brand-500 transition-colors mb-1">Уборка 2-комнатной квартиры</h4>
+                        <p class="text-sm text-slate-500">от 2 часов</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div class="text-lg font-bold text-slate-900 whitespace-nowrap">от 5060 рублей</div>
+                        <button type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Тариф 6 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all gap-4 group hover:border-brand-300">
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-600 group-hover:text-brand-500 transition-colors mb-1">Уборка 3-комнатной квартиры</h4>
+                        <p class="text-sm text-slate-500">от 2,5 часов</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <div class="text-lg font-bold text-slate-900 whitespace-nowrap">от 6260 рублей</div>
+                        <button type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm">Заказать</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Калькулятор услуг -->
-    <section id="calculator" class="py-20 bg-white border-t border-slate-100">
+    <section id="calculator" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Рассчитать стоимость</h2>
@@ -282,7 +378,7 @@
                 <p class="text-slate-600">Примерный расчет стоимости уборки. Итоговая цена может зависеть от степени загрязнения.</p>
             </div>
 
-            <div class="bg-slate-50 rounded-[32px] p-8 md:p-12 shadow-sm border border-slate-100">
+            <div class="bg-white rounded-[32px] p-8 md:p-12 shadow-sm border border-slate-100">
                 <form id="calc-form" class="space-y-8">
                     <!-- Тип уборки -->
                     <div>
@@ -290,15 +386,15 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <label class="cursor-pointer">
                                 <input type="radio" name="clean_type" value="80" class="peer sr-only" checked>
-                                <div class="p-4 rounded-xl border border-slate-200 bg-white text-center hover:border-brand-300 peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:text-brand-700 transition-all font-medium shadow-sm">Поддерживающая</div>
+                                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center hover:border-brand-300 peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:text-brand-700 transition-all font-medium shadow-sm">Поддерживающая</div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="clean_type" value="150" class="peer sr-only">
-                                <div class="p-4 rounded-xl border border-slate-200 bg-white text-center hover:border-brand-300 peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:text-brand-700 transition-all font-medium shadow-sm">Генеральная</div>
+                                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center hover:border-brand-300 peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:text-brand-700 transition-all font-medium shadow-sm">Генеральная</div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="clean_type" value="200" class="peer sr-only">
-                                <div class="p-4 rounded-xl border border-slate-200 bg-white text-center hover:border-brand-300 peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:text-brand-700 transition-all font-medium shadow-sm">После ремонта</div>
+                                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center hover:border-brand-300 peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:text-brand-700 transition-all font-medium shadow-sm">После ремонта</div>
                             </label>
                         </div>
                     </div>
@@ -313,59 +409,59 @@
                     <div>
                         <label class="block text-sm font-semibold text-slate-900 mb-3">Дополнительные опции</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="350" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Поручения (от 350 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="800" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Духовка внутри (от 800 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="500" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">СВЧ внутри (от 500 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="800" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Холодильник (от 800 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="500" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Окна (от 500 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="1000" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Люстра (от 1000 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="800" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Глажка (от 800 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="300" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Смена белья (от 300 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="600" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Балкон (от 600 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="1500" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Парогенератор (от 1500 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="1500" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Доставка техники (от 1500 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="500" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Ключи (от 500 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="1500" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Санузел (от 1500 руб.)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:bg-slate-50 transition-colors shadow-sm overflow-hidden">
+                            <label class="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors shadow-sm overflow-hidden">
                                 <input type="checkbox" value="0" class="calc-extra w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rounded border-slate-300 focus:ring-brand-500 shrink-0">
                                 <span class="text-slate-700 font-medium text-[13px] sm:text-sm truncate">Другое (индивидуально)</span>
                             </label>
